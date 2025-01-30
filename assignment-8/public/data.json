@@ -1,0 +1,218 @@
+[
+    {
+        "product_id": "P001",
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co.com/j903yWd5/Dell-XPS-13.jpg",
+        "category": "Laptop",
+        "price": 1299.99,
+        "description": "Dell XPS 13 with Intel Core i7, 16GB RAM, 512GB SSD.",
+        "specification": [
+            "Intel Core i7-1165G7",
+            "16GB DDR4 RAM",
+            "512GB SSD",
+            "13.3-inch FHD display",
+            "Windows 10 Pro"
+        ],
+        "availability": true,
+        "rating": 3
+    },
+    {
+        "product_id": "P002",
+        "product_title": "Asus VivoBook 15",
+        "product_image": "https://i.ibb.co.com/0yL26N3g/Asus-Vivo-Book-15.jpg",
+        "category": "Laptop",
+        "price": 699.00,
+        "description": "Asus VivoBook 15 with Intel Core i5, 8GB RAM, 256GB SSD.",
+        "specification": [
+            "Intel Core i5-1135G7",
+            "8GB DDR4 RAM",
+            "256GB SSD",
+            "15.6-inch FHD display",
+            "Windows 10"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "P003",
+        "product_title": "MacBook Air M1",
+        "product_image": "https://i.ibb.co.com/LdkXcygt/Mac-Book-Air-M1.jpg",
+        "category": "MacBook",
+        "price": 999.00,
+        "description": "MacBook Air with Apple M1 chip, 8GB RAM, 256GB SSD.",
+        "specification": [
+            "Apple M1 chip",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3-inch Retina display",
+            "macOS Big Sur"
+        ],
+        "availability": false,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P004",
+        "product_title": "Acer Aspire 5",
+        "product_image": "https://i.ibb.co.com/xKdZshDf/Acer-Aspire-5.jpg",
+        "category": "Laptop",
+        "price": 549.00,
+        "description": "Acer Aspire 5 with Intel Core i3, 8GB RAM, 512GB SSD.",
+        "specification": [
+            "Intel Core i3-1115G4",
+            "8GB RAM",
+            "512GB SSD",
+            "15.6-inch FHD display",
+            "Windows 10"
+        ],
+        "availability": false,
+        "rating": 4.3
+    },
+    {
+        "product_id": "P005",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co.com/tT6YhwPp/Lenovo-Think-Pad-X1-Carbon.jpg",
+        "category": "Laptop",
+        "price": 1799.00,
+        "description": "Lenovo ThinkPad X1 Carbon with Intel Core i7, 16GB RAM, 512GB SSD.",
+        "specification": [
+            "Intel Core i7-1185G7",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch WQHD display",
+            "Windows 10 Pro"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "P006",
+        "product_title": "Samsung Galaxy S21",
+        "product_image": "https://i.ibb.co.com/Kp9bCqZZ/Samsung-Galaxy-S21.jpg",
+        "category": "Phone",
+        "price": 799.99,
+        "description": "Samsung Galaxy S21 with 8GB RAM, 128GB storage, 4000mAh battery.",
+        "specification": [
+            "Qualcomm Snapdragon 888",
+            "8GB RAM",
+            "128GB Storage",
+            "6.2-inch FHD+ Display",
+            "4000mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P007",
+        "product_title": "iPhone 13 Pro",
+        "product_image": "https://i.ibb.co.com/KzDYDcxX/i-Phone-13-Pro.jpg",
+        "category": "Phone",
+        "price": 999.99,
+        "description": "Apple iPhone 13 Pro with A15 Bionic chip, 128GB storage, 5G.",
+        "specification": [
+            "A15 Bionic chip",
+            "128GB Storage",
+            "6.1-inch Super Retina display",
+            "5G capability"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P008",
+        "product_title": "JBL T450BT Wireless Headphones",
+        "product_image": "https://i.ibb.co.com/YBRqwKMF/JBL-T450-BT-Wireless-Headphones.jpg",
+        "category": "Accessories",
+        "price": 59.99,
+        "description": "JBL T450BT wireless on-ear headphones with deep bass.",
+        "specification": [
+            "Bluetooth 4.0",
+            "40mm drivers",
+            "10 hours battery life",
+            "Foldable design"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "P009",
+        "product_title": "Logitech MX Master 3 Mouse",
+        "product_image": "https://i.ibb.co.com/VYyJH29K/Logitech-MX-Master-3-Mouse.jpg",
+        "category": "Accessories",
+        "price": 99.99,
+        "description": "Logitech MX Master 3 ergonomic mouse with customizable buttons.",
+        "specification": [
+            "Bluetooth + USB receiver",
+            "Ergonomic design",
+            "60 days battery life",
+            "Customizable buttons"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P010",
+        "product_title": "Garmin Venu 2 Smartwatch",
+        "product_image": "https://i.ibb.co.com/9kKG5S7R/Garmin-Venu-2-Smartwatch.jpg",
+        "category": "Smartwatch",
+        "price": 349.99,
+        "description": "Garmin Venu 2 smartwatch with GPS, heart rate, and stress tracking.",
+        "specification": [
+            "GPS",
+            "Heart rate monitor",
+            "Stress tracking",
+            " AMOLED display"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P011",
+        "product_title": "Apple Watch Series 7",
+        "product_image": "https://i.ibb.co.com/BVV5zC8g/Apple-Watch-Series-7.jpg",
+        "category": "Smartwatch",
+        "price": 399.00,
+        "description": "Apple Watch Series 7 with always-on display, GPS + Cellular.",
+        "specification": [
+            "Always-on Retina display",
+            "GPS + Cellular",
+            "50m water resistance",
+            "WatchOS 8"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P012",
+        "product_title": "MacBook Pro 13 M1",
+        "product_image": "https://i.ibb.co.com/bj5n3Pz1/Mac-Book-Pro-13-M1.jpg",
+        "category": "MacBook",
+        "price": 1299.00,
+        "description": "MacBook Pro 13-inch with M1 chip, 8GB RAM, 256GB SSD.",
+        "specification": [
+            "Apple M1 chip",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3-inch Retina display",
+            "macOS Monterey"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P013",
+        "product_title": "MacBook Pro 16",
+        "product_image": "https://i.ibb.co.com/mrfXs23K/Mac-Book-Pro-16.jpg",
+        "category": "MacBook",
+        "price": 2399.00,
+        "description": "MacBook Pro 16-inch with M1 Pro chip, 16GB RAM, 512GB SSD.",
+        "specification": [
+            "Apple M1 Pro chip",
+            "16GB RAM",
+            "512GB SSD",
+            "16-inch Retina display",
+            "macOS Monterey"
+        ],
+        "availability": true,
+        "rating": 4.9
+    }
+]
