@@ -5,7 +5,7 @@ import Root from "./Components/Root/Root";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Statistics from "./Components/Statistics/Statistics";
 import ViewDetails from "./Components/ViewDetails/ViewDetails";
-import {WishlistContext} from "./Components/Wishlist/WishlistContext"
+import { WishlistContext } from "./Components/Wishlist/WishlistContext";
 import SubBannerContextProvider from "./Components/SubBanner/SubBannerContext";
 import axios from "axios";
 import { useState } from "react";
@@ -23,6 +23,10 @@ function App() {
       element: <Root />,
       errorElement: <ErrorPage />,
       children: [
+        {
+          path: "",
+          element: <Navigate to="/home/all" replace />,
+        },
         {
           path: `/home/:category`,
           element: <Home />,
@@ -123,7 +127,7 @@ function App() {
 
   return (
     <SubBannerContextProvider>
-      <WishlistContext.Provider value={{wishlistItems, setWishlistItems}}>
+      <WishlistContext.Provider value={{ wishlistItems, setWishlistItems }}>
         <CartContext.Provider value={{ cartItems, setCartItems }}>
           <RouterProvider router={router} />
         </CartContext.Provider>
