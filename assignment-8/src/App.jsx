@@ -6,6 +6,7 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Statistics from "./Components/Statistics/Statistics";
 import ViewDetails from "./Components/ViewDetails/ViewDetails";
 import { WishlistContext } from "./Components/Wishlist/WishlistContext";
+import Wishlist from "./Components/Wishlist/Wishlist";
 import SubBannerContextProvider from "./Components/SubBanner/SubBannerContext";
 import axios from "axios";
 import { useState } from "react";
@@ -23,10 +24,10 @@ function App() {
       element: <Root />,
       errorElement: <ErrorPage />,
       children: [
-        {
-          path: "",
-          element: <Navigate to="/home/all" replace />,
-        },
+        // {
+        //   path: "",
+        //   element: <Navigate to="/home/all" replace />,
+        // },
         {
           path: `/home/:category`,
           element: <Home />,
