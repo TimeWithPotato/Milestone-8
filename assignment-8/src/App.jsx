@@ -81,6 +81,7 @@ function App() {
           element: <Dashboard />,
           children: [
             {
+              path: "/dashboard/cart",
               loader: async () => {
                 try {
                   const response = await axios.get("/data.json");
