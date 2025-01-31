@@ -83,7 +83,7 @@ function App() {
             {
               path: "/dashboard/cart",
               loader: async () => {
-                const response = await axios.get("/public/data.json");
+                const response = await axios.get("/data.json");
                 return response.data;
               },
               element: <Cart />,
@@ -91,7 +91,7 @@ function App() {
             {
               path: "/dashboard/wishlist",
               loader: async () => {
-                const response = await axios.get("/public/data.json");
+                const response = await axios.get("/data.json");
                 return response.data;
               },
               element: <Wishlist />,
@@ -101,7 +101,7 @@ function App() {
         {
           path: "/statistics",
           loader: async () => {
-            const response = await axios.get("/public/data.json");
+            const response = await axios.get("/data.json");
             return response.data;
           },
           element: <Statistics />,
