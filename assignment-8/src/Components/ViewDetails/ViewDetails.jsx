@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 import { CiShoppingCart, CiHeart } from "react-icons/ci";
 import { CartContext } from "../Cart/CartContext";
-import { WishlistContext } from "../Wishlist/WishListContext";
+import { WishlistContext } from "../Wishlist/WishlistContext";
 
 const ViewDetails = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
@@ -44,7 +44,7 @@ const ViewDetails = () => {
     if (!cartItems.includes(product_id)) {
       setCartItems([...cartItems, product_id]);
       setAddedToCart(true);
-      setTimeout(() => setAddedToCart(false), 200); // Reset effect after 200ms
+      setTimeout(() => setAddedToCart(false), 200);
     }
   };
 

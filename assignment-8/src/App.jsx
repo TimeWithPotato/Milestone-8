@@ -5,13 +5,13 @@ import Root from "./Components/Root/Root";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Statistics from "./Components/Statistics/Statistics";
 import ViewDetails from "./Components/ViewDetails/ViewDetails";
-import Wishlist from "./Components/Wishlist/Wishlist";
+import {WishlistContext} from "./Components/Wishlist/WishlistContext"
 import SubBannerContextProvider from "./Components/SubBanner/SubBannerContext";
 import axios from "axios";
 import { useState } from "react";
 import { CartContext } from "./Components/Cart/CartContext";
 import Cart from "./Components/Cart/Cart";
-import { WishlistContext } from "./Components/Wishlist/WishListContext";
+
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 
 function App() {
