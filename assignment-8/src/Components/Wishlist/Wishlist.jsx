@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { WishlistContext } from "./WishListContext";
+import { WishlistContext } from "./WishlistContext";
 import WishlistItems from "./WishlistItems";
 import { useLoaderData, useNavigate } from "react-router-dom";
 
