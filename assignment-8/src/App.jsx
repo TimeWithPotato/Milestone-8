@@ -81,18 +81,27 @@ function App() {
           element: <Dashboard />,
           children: [
             {
-              path: "/dashboard/cart",
               loader: async () => {
-                const response = await axios.get("/data.json");
-                return response.data;
+                try {
+                  const response = await axios.get("/data.json");
+                  return Array.isArray(response.data) ? response.data : [];
+                } catch (error) {
+                  console.error("Error fetching data:", error);
+                  return [];
+                }
               },
               element: <Cart />,
             },
             {
               path: "/dashboard/wishlist",
               loader: async () => {
-                const response = await axios.get("/data.json");
-                return response.data;
+                try {
+                  const response = await axios.get("/data.json");
+                  return Array.isArray(response.data) ? response.data : [];
+                } catch (error) {
+                  console.error("Error fetching data:", error);
+                  return [];
+                }
               },
               element: <Wishlist />,
             },
@@ -101,8 +110,13 @@ function App() {
         {
           path: "/statistics",
           loader: async () => {
-            const response = await axios.get("/data.json");
-            return response.data;
+            try {
+              const response = await axios.get("/data.json");
+              return Array.isArray(response.data) ? response.data : [];
+            } catch (error) {
+              console.error("Error fetching data:", error);
+              return [];
+            }
           },
           element: <Statistics />,
         },
