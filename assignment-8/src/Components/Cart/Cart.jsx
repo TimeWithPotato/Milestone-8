@@ -5,6 +5,7 @@ import CartItems from "./CartItems";
 import { ImSortAmountDesc } from "react-icons/im";
 import { ImSortAmountAsc } from "react-icons/im";
 import Modal from "../Modal/Modal";
+import { Helmet } from "react-helmet-async";
 
 const Cart = () => {
   const { cartItems } = useContext(CartContext);
@@ -15,9 +16,9 @@ const Cart = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.title = "Cart"
-  },[])
+  // useEffect(() => {
+  //   document.title = "Cart"
+  // },[])
   useEffect(() => {
     const mappedData = cartItems.map((item, idx) => {
       return loaderData.find((product) => product.product_id === item);
@@ -26,9 +27,9 @@ const Cart = () => {
   }, [cartItems, loaderData]);
 
   useEffect(() => {
-    const total = data.reduce((sum, product) => sum + (product?.price), 0);
+    const total = data.reduce((sum, product) => sum + product?.price, 0);
     setTotalCost(total);
-  },[data])
+  }, [data]);
 
   const handleRemoveItem = (product_id) => {
     setData((prevData) =>
@@ -55,77 +56,82 @@ const Cart = () => {
   const handleConfirmPurchase = () => {
     setData([]);
     setTotalCost(0);
-    setIsModalOpen(false)
+    setIsModalOpen(false);
     navigate("/home/all");
   };
 
   const handleCancelPurchase = () => {
-    setIsModalOpen(false)
+    setIsModalOpen(false);
   };
   // const {product_image,product_title, price, description} = data
   // console.log(data);
   return (
-    <div>
-      <div className="flex justify-between">
-        <h1 className="text-lg font-bold ml-3">Cart</h1>
-        <div className="flex items-center justify-between space-x-8 shadow-lg px-5 py-2 rounded-md">
-          <h1 className="text-lg font-semibold">Total cost : {totalCost}</h1>
-          <button
-            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-full p-1"
-            onClick={handleSortBy}
-          >
-            <span className="flex items-center justify-between w-full bg-white rounded-full text-[#8332C5]  px-5 py-2">
-              Sort By
-              <span>
-                {descOrder ? (
-                  <ImSortAmountDesc className="mt-2 ml-2" size={25} />
-                ) : (
-                  <ImSortAmountAsc className="mt-2 ml-2" size={25} />
-                )}
-              </span>
-            </span>
-          </button>
-          <button
-            className="bg-gradient-to-r from-[#6497b1] to-[#005b96] px-5 py-2 rounded-full text-white text-lg font-medium"
-            onClick={handlePurchase}
-          >
-            Purchase
-          </button>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 gap-4">
-        {data.map((datum, idx) => (
-          <CartItems
-            key={idx}
-            datum={datum}
-            handleRemoveItem={handleRemoveItem}
-          />
-        ))}
-        {!data.length && (
-          <div className="flex justify-center mt-10 items-center min-h-min">
+    <>
+      <Helmet>
+        <title>Kinakata | Cart</title>
+      </Helmet>
+      <div>
+        <div className="flex justify-between">
+          <h1 className="text-lg font-bold ml-3">Cart</h1>
+          <div className="flex items-center justify-between space-x-8 shadow-lg px-5 py-2 rounded-md">
+            <h1 className="text-lg font-semibold">Total cost : {totalCost}</h1>
             <button
-              className="bg-[#039fbe] px-5 py-2 text-center w-32 text-white rounded-lg"
-              onClick={handleNavigateTo}
+              className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-full p-1"
+              onClick={handleSortBy}
             >
-              Let's Buy..!
+              <span className="flex items-center justify-between w-full bg-white rounded-full text-[#8332C5]  px-5 py-2">
+                Sort By
+                <span>
+                  {descOrder ? (
+                    <ImSortAmountDesc className="mt-2 ml-2" size={25} />
+                  ) : (
+                    <ImSortAmountAsc className="mt-2 ml-2" size={25} />
+                  )}
+                </span>
+              </span>
+            </button>
+            <button
+              className="bg-gradient-to-r from-[#6497b1] to-[#005b96] px-5 py-2 rounded-full text-white text-lg font-medium"
+              onClick={handlePurchase}
+            >
+              Purchase
             </button>
           </div>
-        )}
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          {data.map((datum, idx) => (
+            <CartItems
+              key={idx}
+              datum={datum}
+              handleRemoveItem={handleRemoveItem}
+            />
+          ))}
+          {!data.length && (
+            <div className="flex justify-center mt-10 items-center min-h-min">
+              <button
+                className="bg-[#039fbe] px-5 py-2 text-center w-32 text-white rounded-lg"
+                onClick={handleNavigateTo}
+              >
+                Let's Buy..!
+              </button>
+            </div>
+          )}
+        </div>
+        {/* Modallllllllllllllllll */}
+        <div>
+          {isModalOpen ? (
+            <Modal
+              isModalOpen={isModalOpen}
+              onClose={handleCancelPurchase}
+              onConfirm={handleConfirmPurchase}
+              totalCost={totalCost}
+            />
+          ) : (
+            " "
+          )}
+        </div>
       </div>
-      {/* Modallllllllllllllllll */}
-      <div>
-        {isModalOpen ? (
-          <Modal
-            isModalOpen={isModalOpen}
-            onClose={handleCancelPurchase}
-            onConfirm={handleConfirmPurchase}
-            totalCost={totalCost}
-          />
-        ) : (
-          " "
-        )}
-      </div>
-    </div>
+    </>
   );
 };
 
